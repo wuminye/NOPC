@@ -2,10 +2,10 @@
 
 Pytorch implementation of NOPC.
 
-
-**Neural Opacity Point Cloud** 
-[Cen Wang](https://github.com/willona), [Minye Wu](https://github.com/wuminye), Ziyu Wang, Liao Wang, Hao Sheng, Jingyi Yu.
-In ICCP2020.
+![framework](docs/framework.jpg)
+**Neural Opacity Point Cloud** </br>
+[Cen Wang](https://github.com/willona), [Minye Wu](https://github.com/wuminye), Ziyu Wang, Liao Wang, Hao Sheng, Jingyi Yu.</br>
+In ICCP2020.</br>
 
 ## Abstract
 Fuzzy objects composed of hair, fur, or feather are impossible to scan even with the latest active or passive 3D scanners. We present a novel and practical neural rendering (NR) technique called neural opacity point cloud (NOPC) to allow high quality rendering of such fuzzy objects at any viewpoint. NOPC employs a learning-based scheme to extract geometric and appearance features on 3D point clouds including their opacity. It then maps the 3D features onto virtual viewpoints where a new U-Net based NR manages to handle noisy and incomplete geometry while maintaining translation equivariance. Comprehensive experiments on
