@@ -1,11 +1,11 @@
-# Neural Opacity Point Cloud (NOPC) [[Project Page]]() [[Paper]]() 
+# Neural Opacity Point Cloud (NOPC) [[Project Page]](https://wuminye.github.io/NOPC/) [[Paper]]() 
 
 Pytorch implementation of NOPC.
 
 ![framework](docs/framework.jpg)
 **Neural Opacity Point Cloud** </br>
 [Cen Wang](https://github.com/willona), [Minye Wu](https://github.com/wuminye), Ziyu Wang, Liao Wang, Hao Sheng, Jingyi Yu.</br>
-In ICCP2020.</br>
+In ICCP 2020.</br>
 
 ## Abstract
 Fuzzy objects composed of hair, fur, or feather are impossible to scan even with the latest active or passive 3D scanners. We present a novel and practical neural rendering (NR) technique called neural opacity point cloud (NOPC) to allow high quality rendering of such fuzzy objects at any viewpoint. NOPC employs a learning-based scheme to extract geometric and appearance features on 3D point clouds including their opacity. It then maps the 3D features onto virtual viewpoints where a new U-Net based NR manages to handle noisy and incomplete geometry while maintaining translation equivariance. Comprehensive experiments on
@@ -47,8 +47,8 @@ Prepare a data folder with a structure like following:
 .
 ├──  img
 │    └── 0    					
-│		└──img_%04d.jpg   		- undistorted RGB images for each view. view number start from 1.
-│		└──img_%04d_alpha.png	- alpha mattes for corresponding RGB image.
+│        └──img_%04d.jpg   		- undistorted RGB images for each view. view number start from 1.
+│        └──img_%04d_alpha.png	- alpha mattes for corresponding RGB image.
 │
 ├──  pointclouds				
 │    └── frame1.obj			- point cloud. Each row is the "x y z" coordinate for a 3D point.
