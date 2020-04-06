@@ -8,14 +8,6 @@
 <meta name="keywords" content="neural rendering, opacity">
 
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
 <title> Neural Opacity Point Cloud (NOPC) </title>
 </head>
 
@@ -55,10 +47,10 @@ Neural Opacity Point Cloud (NOPC)</h2>
 <p align="center">
 <table style="width:960px" align="center">
 <tr>
-	<td><img width=960px alt="" src="figures/pipeline.png"></td>	
+	<td><img width=960px alt="" src="figures/framework.jpg"></td>	
 </tr>
 <tr>
-	<td><p class="auto-style5"> Our NOPC framework: From a 3D point cloud $\mathcal{P}$, we first learn its corresponding cloud $\mathcal{F}$. To render virtual new view $V$, we project $\mathcal{P}$ and $\mathcal{F}$ onto $V$ to form a view-dependent feature map $\mathbf{M}$. Our multiple-branch Encoder-Decoder network maps $\mathbf{M}$ to an RGB image and an alpha matte at $V$. The network can be trained using the ground truth RGB images and alpha mattes in an end-to-end manner in Sec. 3. </p></td>
+	<td><p class="auto-style5"> Our NOPC framework: From a 3D point cloud P, we first learn its corresponding cloud F. To render virtual new view V, we project P and F onto V to form a view-dependent feature map M. Our multiple-branch Encoder-Decoder network maps M to an RGB image and an alpha matte at V. The network can be trained using the ground truth RGB images and alpha mattes in an end-to-end manner in Sec. 3. </p></td>
 </tr>
 </table>
 
@@ -71,29 +63,21 @@ Neural Opacity Point Cloud (NOPC)</h2>
 <p id="results", class="auto-style4"><strong>Results</strong></p>
 <table style="width:830px" align="center">
 <tr>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/Hair.gif"></td>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/Hair_alpha.gif"></td>	
+	<td width="400px"><img width="400px" alt="" src="figures/gif/Hair.gif"></td>
 
-	<td width="230px" style="text-align:right"><img width="200px" alt="" src="figures/gif/Wolf.gif"></td>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/Wolf_alpha.gif"></td>	
+	<td width="430px" style="text-align:right"><img width="400px" alt="" src="figures/gif/Wolf.gif"></td>
+</tr>
+
+<tr>
+	<td width="400px"><img width="400px" alt="" src="figures/gif/Humanhair.gif"></td>
+	<td width="430px" style="text-align:right"><img width="400px" alt="" src="figures/gif/Hairstyle1.gif"></td>
 </tr>
 <tr>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/Cat.gif"></td>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/Cat_alpha.gif"></td>	
-
-	<td width="230px" style="text-align:right"><img width="200px" alt="" src="figures/gif/HumanHair.gif"></td>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/HumanHair_alpha.gif"></td>	
+	<td width="400px"><img width="400px" alt="" src="figures/gif/Hairstyle2.gif"></td>
+	<td width="430px" style="text-align:right"><img width="400px" alt="" src="figures/gif/Hairstyle3.gif"></td>
 </tr>
 <tr>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/Hairstyle1.gif"></td>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/Hairstyle1_alpha.gif"></td>	
-
-	<td width="230px" style="text-align:right"><img width="200px" alt="" src="figures/gif/Hairstyle2.gif"></td>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/Hairstyle2_alpha.gif"></td>	
-</tr>
-<tr>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/Hairstyle3.gif"></td>
-	<td width="200px"><img width="200px" alt="" src="figures/gif/Hairstyle3_alpha.gif"></td>	
+	<td width="400px"><img width="400px" alt="" src="figures/gif/Cat.gif"></td>
 </tr>
 </table>
 
@@ -108,7 +92,9 @@ Neural Opacity Point Cloud (NOPC)</h2>
 	<td align="left" class="auto-style5">&quot Neural Opacity Point Cloud&quot;<br>
 Cen Wang, Minye Wu, Ziyu Wang, Liao Wang, Hao Sheng, Jingyi Yu.
 IEEE International Conference on Computational Photography (ICCP), 2020<br><br>
-<img alt="" height="32" src="figures/pdf_icon.gif" width="31">&nbsp;&nbsp;[<a href="#">Paper (pdf, 12.9MB)</a>]<br><br> 
+<img alt="" height="32" src="figures/pdf_icon.gif" width="31">&nbsp;&nbsp;[<a href="#">Paper (pdf, 12.9MB)</a>]&nbsp;&nbsp;
+
+<img alt="" height="32" src="figures/video_icon.png" width="31">&nbsp;&nbsp;[<a href="#">Supplemental Video</a>]<br><br> 
 
 <img alt="" height="32" src="figures/ppt.gif" width="31">&nbsp;&nbsp;[<a href="#">Spotlight Presentation (pptx, ~MB)</a>]<br><br> 
 
