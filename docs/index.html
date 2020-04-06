@@ -1,7 +1,128 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="main.css" rel="stylesheet" media="all">
+<meta name="description" content="Automatic Portrait Segmentation" />
+<meta name="keywords" content="neural rendering, opacity">
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<title> Neural Opacity Point Cloud (NOPC) </title>
+</head>
+
 <body>
 
-<h1>Neural Opacity Point Cloud</h1>
+<div id="top_arrow" style="position: fixed; bottom: 10px; right: 10px;">
+<a href="#title">
+<img src="./figures/top_arrow.jpg" style="border: 0pt none ; width: 26px; height: 32px;"/></a>
+</div>
+
+<h2 id="title" class="auto-style1">
+<!--<img alt="" class="style4" height="135" src="figures/siga_2012.jpg" style="float: left" width="123">-->
+Neural Opacity Point Cloud (NOPC)</h2>
+<p class="auto-style7"  align="center">
+	<a href="https://github.com/willona" target="_blank">Cen Wang</a><sup>1</sup> 
+	&nbsp;&nbsp;&nbsp;
+	<a href="https://github.com/wuminye" target="_blank">Minye Wu</a><sup>1,2</sup>
+	&nbsp;&nbsp;&nbsp;
+	Ziyu Wang<sup>1</sup>
+	&nbsp;&nbsp;&nbsp;
+	Liao Wang<sup>1</sup>
+	&nbsp;&nbsp;&nbsp;
+	Hao Sheng<sup>3</sup>
+	&nbsp;&nbsp;&nbsp;
+	Jingyi Yu<sup>1</sup>
+	&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class="auto-style7"  align="center">
+<sup>1</sup>ShanghaiTech Univeristy
+&nbsp;&nbsp;&nbsp;
+<sup>2</sup>Chinese Academy of Sciences
+&nbsp;&nbsp;&nbsp;
+<sup>3</sup>Beihang University</p>
+<!--<p class="auto-style7"  align="center">&nbsp;&nbsp;&nbsp; </p>-->
+<p align=left>&nbsp;</p>
+<p align="center">
+<table style="width:960px" align="center">
+<tr>
+	<td><img width=960px alt="" src="figures/pipeline.png"></td>	
+</tr>
+<tr>
+	<td><p class="auto-style5"> Our NOPC framework: From a 3D point cloud $\mathcal{P}$, we first learn its corresponding cloud $\mathcal{F}$. To render virtual new view $V$, we project $\mathcal{P}$ and $\mathcal{F}$ onto $V$ to form a view-dependent feature map $\mathbf{M}$. Our multiple-branch Encoder-Decoder network maps $\mathbf{M}$ to an RGB image and an alpha matte at $V$. The network can be trained using the ground truth RGB images and alpha mattes in an end-to-end manner in Sec. 3. </p></td>
+</tr>
+</table>
+
+<p class="style2"><strong><span class="auto-style6">Abstract</span></strong></p>
+<p class="auto-style5">Fuzzy objects composed of hair, fur, or feather are impossible to scan even with the latest active or passive 3D scanners. We present a novel and practical neural rendering (NR) technique called neural opacity point cloud (NOPC) to allow high quality rendering of such fuzzy objects at any viewpoint. NOPC employs a learning-based scheme to extract geometric and appearance features on 3D point clouds including their opacity. It then maps the 3D features onto virtual viewpoints where a new U-Net based NR manages to handle noisy and incomplete geometry while maintaining translation equivariance. Comprehensive experiments on existing and new datasets show our NOPC can produce photorealistic rendering on inputs from multi-view setups such as a turntable system for hair and furry toy captures.
+</p>
+<p class="auto-style5">&nbsp;</p>
+
+<p class="auto-style5">&nbsp;</p>
+<p id="results", class="auto-style4"><strong>Results</strong></p>
+<table style="width:830px" align="center">
+<tr>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/Hair.gif"></td>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/Hair_alpha.gif"></td>	
+
+	<td width="230px" style="text-align:right"><img width="200px" alt="" src="figures/gif/Wolf.gif"></td>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/Wolf_alpha.gif"></td>	
+</tr>
+<tr>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/Cat.gif"></td>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/Cat_alpha.gif"></td>	
+
+	<td width="230px" style="text-align:right"><img width="200px" alt="" src="figures/gif/HumanHair.gif"></td>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/HumanHair_alpha.gif"></td>	
+</tr>
+<tr>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/Hairstyle1.gif"></td>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/Hairstyle1_alpha.gif"></td>	
+
+	<td width="230px" style="text-align:right"><img width="200px" alt="" src="figures/gif/Hairstyle2.gif"></td>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/Hairstyle2_alpha.gif"></td>	
+</tr>
+<tr>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/Hairstyle3.gif"></td>
+	<td width="200px"><img width="200px" alt="" src="figures/gif/Hairstyle3_alpha.gif"></td>	
+</tr>
+</table>
+
+<p class="auto-style5">&nbsp;</p>
+<p id="downloads", class="auto-style4"><strong>Downloads</strong></p>
+
+<table cellSpacing=4 cellPadding=2 border=0 style="width: 90%">
+<tr COLSPAN="2">
+	<td align="center" valign="center">
+		<img style="padding:0; clear:both; " src="figures/paper_icon.png" align="middle" alt="Snapshot for paper" class="pdf" width="200" />
+	</td>
+	<td align="left" class="auto-style5">&quot Neural Opacity Point Cloud&quot;<br>
+Cen Wang, Minye Wu, Ziyu Wang, Liao Wang, Hao Sheng, Jingyi Yu.
+IEEE International Conference on Computational Photography (ICCP), 2020<br><br>
+<img alt="" height="32" src="figures/pdf_icon.gif" width="31">&nbsp;&nbsp;[<a href="#">Paper (pdf, 12.9MB)</a>]<br><br> 
+
+<img alt="" height="32" src="figures/ppt.gif" width="31">&nbsp;&nbsp;[<a href="#">Spotlight Presentation (pptx, ~MB)</a>]<br><br> 
+
+<img alt="" height="32" src="figures/code_icon.png" width="31">&nbsp;&nbsp;[<a href="https://github.com/wuminye/NOPC">code (github)</a>]<br><br> 
+
+<img alt="" height="32" width="32" src="figures/file_icon.png">&nbsp;[<a href="#">Dataset(zip, 0.99GB)</a>] &nbsp;[<a href="#">Model(zip, 622MB)</a>]<br><br>
+</td>
+</tr>
+</table>
+<br>
+
+<p class="auto-style1"><font color="#999999">Last update: Apr. 6, 2020</font></p>
+
 
 </body>
+
 </html>
