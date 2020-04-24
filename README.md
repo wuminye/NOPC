@@ -2,7 +2,7 @@
 
 Pytorch implementation of NOPC.
 
-![framework](docs/framework.jpg)
+![framework](docs/figures/framework.jpg)
 **Neural Opacity Point Cloud** </br>
 [Cen Wang](https://github.com/willona), [Minye Wu](https://github.com/wuminye), Ziyu Wang, Liao Wang, Hao Sheng, Jingyi Yu.</br>
 In ICCP 2020.</br>
